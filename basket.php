@@ -42,8 +42,8 @@ include_once('core/init.php');
 		endforeach; 
 			echo '<strong>Total:</strong> &pound'.$cart->total().'<p>';
 			
-			else :
-				echo 'cart is empty'.'<p>';
+		else :
+			echo 'cart is empty'.'<p>';
 		endif;
 	?>
 		<a href='index.php'>Continue Shopping</a>
