@@ -25,6 +25,7 @@ include_once('core/init.php');
 			<input type='hidden' name='value' value=1>
 			<input type='submit' name='submit' value='Add To Cart'>
 		</form><br>
+		
 	<?php endforeach; ?>
     </body>
 </html>
