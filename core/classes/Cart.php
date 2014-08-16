@@ -13,7 +13,7 @@ class Cart implements cartInterface
 	*
 	* @var float
 	*/
-	private $_total;
+	private $_total = null;
 	
 	/**
 	* checks if cart is available
@@ -155,15 +155,24 @@ class Cart implements cartInterface
 	*/
 	public function total() 
 	{
-		$id = array_keys(sessions::get('cart'));
-		
-		foreach( $id as $key)
+		if($this->cart())
 		{
-			$this->_total = $this->_total + $this->itemPrice($key);
+			$id = array_keys(sessions::get('cart'));
+			
+			foreach( $id as $key)
+			{
+				$this->_total = $this->_total + $this->itemPrice($key);
+			
+			} 
+			
+			if($this->_total == 0)
+			{
+				sessions::clear('cart');
+			}
+			
+			return sprintf("%01.2f", $this->_total);
 		}
-		
-		return sprintf("%01.2f", $this->_total);
-	}
+	}	
 	
 	/**
 	* gets information of items in cart
