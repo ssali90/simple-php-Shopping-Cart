@@ -28,21 +28,21 @@ class Db
 	*
 	* @var string
 	*/
-	private $_pass = 'k1berur1tah';
+	private $_pass = 'your password';
 	
 	/**
 	* name of the database the products are stored
 	*
 	* @var string
 	*/
-	private $_db = 'shoppingcart';
+	private $_db = 'your db name';
 	
 	/**
 	* database host
 	*
 	* @var string
 	*/
-	private $_host = 'localhost';
+	private $_host = 'your host';
 	
 	/**
 	* name of table we are quering
