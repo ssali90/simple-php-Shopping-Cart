@@ -45,9 +45,10 @@ include_once('core/init.php');
 			<form action='basket.php' method='post'>
 				<input type='text' value='<?php echo $value; ?>' name='change' size='1' autocomplete='off'>
 				<input type='hidden' name='id' value='<?php echo $key; ?>'>
-			</form><br>
+			</form>
+			<br>
 	<?php
-	endforeach; 
+		endforeach; 
 	
 		echo '<strong>Total:</strong> &pound'.$cart->total().'<p>';
 	?>
