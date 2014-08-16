@@ -12,7 +12,7 @@ include_once('core/init.php');
 		
 		$cart->updateQuantity($key, $value);
 		
-		header('location:basket.php');
+			header('location:basket.php');
 	}
 ?>
 
@@ -25,6 +25,8 @@ include_once('core/init.php');
     <body>
 		<h3>Items In Basket</h3>
 	<?php
+	if($cart->cart()) :
+	
 		foreach(sessions::get('cart') as $key => $value) : 
 			$prods = $items->getDetails($key);
 			
@@ -38,8 +40,11 @@ include_once('core/init.php');
 			<br>
 	<?php
 		endforeach; 
-	
-		echo '<strong>Total:</strong> &pound'.$cart->total().'<p>';
+			echo '<strong>Total:</strong> &pound'.$cart->total().'<p>';
+			
+			else :
+				echo 'cart is empty'.'<p>';
+		endif;
 	?>
 		<a href='index.php'>Continue Shopping</a>
     </body>
