@@ -14,8 +14,10 @@ include_once('core/init.php');
 		header('location:basket.php');
 	}
 
-//output number of items in cart	
-	echo $cart->numbItems('no items in basket').'<br>';
+//check for items in the store
+	if($item->getItems('products')) :
+	
+	
 ?>
 
 <!doctype html>
@@ -25,8 +27,8 @@ include_once('core/init.php');
         <title>Items</title>
     </head>
     <body>
+	<h2>Items</h2>
 	<?php
-//output items in database
 		foreach($item->getItems('products') as $items) :
 			
 			echo $items->product_name.'<br>';
@@ -39,6 +41,12 @@ include_once('core/init.php');
 			<input type='submit' name='submit' value='Add To Cart'>
 		</form><br>
 		
-	<?php endforeach; ?>
+	<?php 
+		endforeach;
+		
+		else : 
+			echo 'please add items to database';	
+		endif;
+	?>
     </body>
 </html>
