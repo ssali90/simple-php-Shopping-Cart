@@ -42,7 +42,7 @@ interface cartInterface
 	public function numbItems($string); 
 	
 	/**
-	* updates the quanttiy of an itm
+	* updates the quanttiy of an item
 	*
 	* @param int $key
 	* @param int $value
