@@ -25,6 +25,8 @@ include_once('core/init.php');
         <title>Items</title>
     </head>
     <body>
+    
+//output items from database
 	<?php
 		foreach($item->getItems('products') as $items) :
 			
