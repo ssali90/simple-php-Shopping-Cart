@@ -12,7 +12,7 @@ include_once('core/init.php');
 		
 		$cart->updateQuantity($key, $value);
 		
-			header('location:basket.php');
+		header('location:basket.php');
 	}
 ?>
 
