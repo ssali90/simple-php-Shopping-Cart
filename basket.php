@@ -4,17 +4,6 @@ include_once('core/init.php');
 	$items = new items(new Db);
 	$cart = new cart($items);
 	
-//add item to the cart
-	if(isset($_POST['submit']))
-	{
-		$id = (int)$_POST['pid'];
-		$value = (int)$_POST['value'];
-		
-		$cart->addToCart($id, $value);
-			
-			header('location:basket.php');
-	}
-	
 //update the product quantity
 	if(isset($_POST['change']))
 	{
