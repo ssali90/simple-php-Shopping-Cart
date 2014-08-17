@@ -23,7 +23,7 @@ include_once('core/init.php');
         <title>Basket</title>
     </head>
     <body>
-		<h3>Items In Basket</h3>
+	<h3>Items In Basket</h3>
 	<?php
 	if($cart->cart()) :
 	
