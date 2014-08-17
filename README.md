@@ -9,7 +9,7 @@ make sure you run the cart.sql and add your database user details to the db clas
 
 ##Add
 To add an item to the shopping cart call the addToCart method and supply an item id and quantity you wish to add,
-if the item item id is not in the database the script will error
+if the item id is not in the database the script will error
 
 ```
 $cart->addToCart(1, 1);
