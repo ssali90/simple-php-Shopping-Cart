@@ -34,3 +34,20 @@ $cart->update()
 ```
 Lets you update an item quantity in the cart, if a value is non numeric or is zero the items will automatically be removed from the cart 
 
+##output items
+```
+if($cart->cart())
+{
+  foreach(sessions::get('cart') as $key => $value)
+  {
+    $prods = $items->getDetails($key);
+      
+      echo $prods->name(). '<br>';
+      echo '&pound'.$cart->itemPrice($key).'<br>';
+  }
+}
+```
+if you wish to output the items in the cart use the above code and of of cause you can easliy add your own styling 
+
+
+
