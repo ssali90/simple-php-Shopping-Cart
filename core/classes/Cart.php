@@ -123,13 +123,19 @@ class Cart implements cartInterface
 	/**
 	* counts the number of items in the cart
 	*
-	* @return int
+	* @return bool
 	*/
 	public function numbItems($string)
 	{
-		$number = !count(sessions::get('cart')) ? [] : array_sum(array_values(sessions::get('cart')));
+		if($this->cart())
+		{
+			
+		$number =  array_sum(array_values(sessions::get('cart')));
 		
 			return $number ? $number : $string ;
+		}
+		
+		return false;
 	}
 	
 	/**
