@@ -47,7 +47,7 @@ if($cart->cart())
   }
 }
 ```
-if you wish to output the items in the cart use the above code and of of cause you can easliy add your own styling 
+if you wish to output the items in the cart use the above code and of cause you can easliy add your own styling to this
 
 
 
