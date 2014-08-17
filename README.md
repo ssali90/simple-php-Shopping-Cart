@@ -1,10 +1,10 @@
 #simple-php-Shopping-Cart
 
-An easy to use shopping cart that lets you add, update and remove items from a session based cart 
+An easy to use shopping cart that is backed by a database and lets you add, update and remove items from a session based cart 
 
 ##configure
 
-Products must be added to a mysql database in order to use the cart.
+items must be added to a mysql database in order to use the cart.
 make sure you run the cart.sql and add your database user details to the db class located in the core/classes file
 
 ##Add
@@ -47,7 +47,7 @@ if($cart->cart())
   }
 }
 ```
-if you wish to output the items in the cart use the above code and of cause you can easliy add your own styling to this
+If you wish to output the items in the cart use the above code and of cause you can easliy add your own styling to this
 
 
 
