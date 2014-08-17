@@ -50,10 +50,7 @@ if($cart->cart())
       echo '&pound'.$cart->itemPrice($key).'<br>';
   }
 } 
-else 
-{
-  ..............
-}
+
 ```
 If you wish to output the items in the cart use the above code and of cause you can easliy add your own styling to this
 
