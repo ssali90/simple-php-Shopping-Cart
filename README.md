@@ -8,7 +8,8 @@ items must be added to a mysql database in order to use the cart.
 make sure you run the cart.sql and add your database user details to the db class located in the core/classes file
 
 ##Add
-To add an item to the shopping cart call the addToCart method and supply an item id and quantity you wish to add
+To add an item to the shopping cart call the addToCart method and supply an item id and quantity you wish to add,
+if the item item id is not in the database the script will error
 
 ```
 $cart->addToCart(1, 1);
@@ -30,13 +31,14 @@ Will return the number of items that have been added to the cart
 
 ##update 
 ```
-$cart->update()
+$cart->update(1, 1)
 ```
 Lets you update an item quantity in the cart, if a value is non numeric or is zero the items will automatically be removed from the cart 
 
 #Items
 
 ##output items
+The code below is currently the best way to output cart items
 ```
 if($cart->cart())
 {
@@ -79,9 +81,9 @@ $items->getDetails($id)->quantity()
 This will get the quantity available of the given item
 
 ##Other 
-The sessions and db classes a not only tied to this project and can easily be used in any other
+The sessions and db classes are not only tied to this project and can easily be added to and used in any other
 
-#ToDo
+##ToDo
 
 1. Add and calculate the taxes
 2. look for security loop holes 
