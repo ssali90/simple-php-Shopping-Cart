@@ -72,7 +72,7 @@ class Cart implements cartInterface
 		return in_array($key, $id) ? true : false;
 	}
 	
-	/*
+	/**
 	* adds to the product quantity if the item is already in the cart
 	*
 	* @param int $id
