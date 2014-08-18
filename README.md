@@ -71,7 +71,7 @@ else {
 }
 ```
 
-To check if a spesific item exists and its details call 
+To check if a specific item exists and output its details call 
 ```
 $items->getDetails($id)->quantity()
 ```
@@ -85,6 +85,6 @@ The sessions and db classes are not only tied to this project and can easily be 
 1. Add and calculate the taxes
 2. look for security loop holes 
 3. Make cart much more flexible 
-4. Gain more followers on github :-)
+4. Gain a follower on github :-)
 
 
