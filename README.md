@@ -5,7 +5,7 @@ An easy to use shopping cart that is backed by a database and lets you add, upda
 ##configure
 
 items must be added to a mysql database in order to use the cart.
-make sure you run the cart.sql and add your database user details to the db class located in the core/classes file
+make sure you add your database user details to the db class located in the core/classes file
 
 ##Add
 To add an item to the shopping cart call the addToCart method and supply an item id and quantity you wish to add,
