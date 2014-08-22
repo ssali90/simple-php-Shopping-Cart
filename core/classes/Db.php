@@ -184,7 +184,7 @@ class Db
 	* @var string value
 	* @return bool
 	*/
-	private function execute($sql, $value = null) 
+	public function execute($sql, $value = null) 
 	{
 		$prep = $this->_stmt = $this->_pdo->prepare($sql);
 			
