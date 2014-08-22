@@ -2,6 +2,10 @@
 include_once('core/init.php');
 	$item = new items(new Db);
 	$cart = new cart($item);
+	
+//create our products table, 
+//this method can be removed after you have run this script once
+	$item->create();
 
 //add item to the cart
 	if(isset($_POST['submit']))
