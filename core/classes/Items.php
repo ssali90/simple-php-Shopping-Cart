@@ -85,6 +85,25 @@ class Items
 		return false;
 	}
 	
+	/**
+	* creates the mysql database that stores our items 
+	* if it is not available
+	*
+	* @return bool
+	*/
+	public function create()
+	{
+		$sql = 'CREATE TABLE IF NOT EXISTS products
+			(id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+			product_name VARCHAR(50) NOT NULL UNIQUE,
+			product_description text NOT NULL,
+			product_quantity int(5) NOT NULL,
+			product_price decimal(5,2) NOT NULL)
+				';
+				
+			return $this->_db->execute($sql);
+	}
+	
 }
 
 ?>
